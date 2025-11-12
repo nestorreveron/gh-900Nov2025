@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Carros - Car Racing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🏎️ Juego de Carros</h1>
+        
+        <div class="info-panel">
+            <div class="score">
+                <span>Puntos: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="speed">
+                <span>Velocidad: </span>
+                <span id="speed">50</span>
+                <span> km/h</span>
+            </div>
+        </div>
+
+        <div class="game-screen" id="gameScreen">
+            <div class="road">
+                <div class="lane-marker lane-left"></div>
+                <div class="lane-marker lane-center"></div>
+                <div class="lane-marker lane-right"></div>
+                <div id="playerCar" class="car player-car">🏎️</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-start">Iniciar Juego</button>
+            <button id="pauseBtn" class="btn btn-pause" disabled>Pausar</button>
+            <button id="resetBtn" class="btn btn-reset">Reiniciar</button>
+        </div>
+
+        <div class="instructions">
+            <h3>Instrucciones:</h3>
+            <ul>
+                <li>Usa las flechas ← → o las teclas A/D para mover el carro</li>
+                <li>Evita chocar con los otros carros</li>
+                <li>Acumula puntos mientras conduces</li>
+            </ul>
+        </div>
+
+        <div id="gameOver" class="game-over hidden">
+            <h2>¡Juego Terminado!</h2>
+            <p>Tu puntuación: <span id="finalScore">0</span></p>
+            <button id="restartBtn" class="btn btn-restart">Jugar de Nuevo</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
